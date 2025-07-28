@@ -1,6 +1,6 @@
 package main.java.com.steuerung;
 
-import com.benutzerschnittstelle.Benutzerschnittstelle;
+import main.java.com.benutzerschnittstelle.Benutzerschnittstelle;
 import main.java.com.fachkonzept.Spielblatt;
 import main.java.com.fachkonzept.Bestenliste;
 import main.java.com.fachkonzept.Endstand;

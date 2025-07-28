@@ -1,4 +1,4 @@
-package com.benutzerschnittstelle;
+package main.java.com.benutzerschnittstelle;
 
 import java.awt.EventQueue;
 import java.awt.Image;

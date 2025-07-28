@@ -55,9 +55,7 @@
 				<artifactId>exec-maven-plugin</artifactId>
 				<version>3.1.0</version>
 				<configuration>
-					<mainClass>com.benutzerschnittstelle.Benutzerschnittstelle</mainClass> <!--
-					Replace with
-					your class -->
+					<mainClass>main.java.com.benutzerschnittstelle.Benutzerschnittstelle</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>
