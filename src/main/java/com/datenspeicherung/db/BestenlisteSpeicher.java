@@ -9,6 +9,8 @@ import java.util.ArrayList;
 
 import main.java.com.fachkonzept.Endstand;
 
+// TODO
+// refactor where we're throwing exceptions
 public class BestenlisteSpeicher implements AutoCloseable {
 	private Connection con;
 	private PreparedStatement stmt;
