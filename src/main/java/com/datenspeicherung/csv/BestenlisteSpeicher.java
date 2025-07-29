@@ -1,10 +1,5 @@
 package main.java.com.datenspeicherung.csv;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.io.FileWriter;
 import java.io.File;
@@ -21,7 +16,7 @@ import main.java.com.fachkonzept.Endstand;
 public class BestenlisteSpeicher implements AutoCloseable {
 	private final File file; 
 
-	public BestenlisteSpeicher() {
+	public BestenlisteSpeicher() throws Exception {
 		file = new File("kniffel.csv");
 		if (file.length() == 0) {
 			try (CSVWriter writer = new CSVWriter(new FileWriter(file))) {
@@ -29,7 +24,7 @@ public class BestenlisteSpeicher implements AutoCloseable {
 				writer.writeNext(header);
 			} 
 			catch (IOException e) {
-				System.out.println(e.getLocalizedMessage());
+				throw new IOException(e);
 			}
 		}
 	}
