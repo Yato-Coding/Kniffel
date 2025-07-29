@@ -18,13 +18,11 @@ import com.opencsv.exceptions.CsvValidationException;
 
 import main.java.com.fachkonzept.Endstand;
 
-// TODO
-// awful mishmash of error handling to somehow try not to break RAII every step of the way
 public class BestenlisteSpeicher implements AutoCloseable {
-	// this is bad
-	File file = new File("kniffel.csv");
+	private final File file; 
 
 	public BestenlisteSpeicher() {
+		file = new File("kniffel.csv");
 		if (file.length() == 0) {
 			try (CSVWriter writer = new CSVWriter(new FileWriter(file))) {
 				String[] header = new String[] {"name", "punkte"};
@@ -38,7 +36,7 @@ public class BestenlisteSpeicher implements AutoCloseable {
 
 	@Override
 	public void close() {
-		// TODO
+		// noop 
 	}
 
 	public Endstand[] liesEndstandAusSpeicher() {

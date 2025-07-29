@@ -1,6 +1,6 @@
 package main.java.com.fachkonzept;
 
-import main.java.com.datenspeicherung.db.BestenlisteSpeicher;
+import main.java.com.datenspeicherung.json.BestenlisteSpeicher;
 import java.lang.Exception;
 
 public class Bestenliste {
